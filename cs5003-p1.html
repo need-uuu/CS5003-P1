@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <title>Quizzical</title>
+    <link rel="stylesheet" type="text/css" href="cs5003_p1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Bungee+Spice&family=Honk&family=Protest+Riot&family=Poor+Story&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Quizzical</h1>
+    <h2>Produced by 230031317 for assessment 1 of CS5003</h2>
+
+    <div class="whole">
+        <div class="header">
+            <button class="headerbutton" id="help" onclick="help()" style="display: none;">HELP!</button>
+            <button class="headerbutton" id="ask" onclick="askTheHost()" style="display: none;">Ask the host</button>
+            <button class="headerbutton" id="pause" onclick="pauseTimer()" style="display: none;">PAUSE</button>
+        </div>
+        <p id="timer" style="display: none;"></p>
+        
+        <fieldset class="fieldset">
+            <p id ="rule"></p>
+            <p id ="rule2"></p>
+            <p id="selectedDifficulty"></p>
+            <div id="quiz-container"></div>
+            <div id="answer-container"></div>
+            <button class="categories" id="select" onclick="selectCategories()">Check Today's Random Categories!</button>
+            <div id="difficulty">
+
+                <p id="categories"></p>
+                <button class="difficulty" id="easy" value="easy">easy</button>
+                <button class="difficulty" id="medium" value="medium">medium</button>
+                <button class="difficulty" id="hard" value="hard">hard</button>
+
+            </div>
+            <p class="scoreBoard" id="score"></p>
+            <p class="scoreBoard" id="highestScore"></p>
+            <button class="headerbutton" id="submit" onclick="checkTheAnswer()" style="display: none;">submit</button>
+            <p id="log"></p>
+        </fieldset>
+        
+        <div class="player">
+            
+            <button class="headerbutton" id="next-question" style="display: none;">next-question</button>
+            <button class="headerbutton" id="stopQuiz" onclick="gameOver()" style="display: none;">Stop the Quiz</button>
+            <button class="headerbutton" id="restart" style="display: none;">Restart</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="mario-wrapper">
+            <div class="state1"></div>
+            <div class="state2"></div>
+            <div class="state3"></div>
+        </div>
+        <div class="floor"></div>
+    </div>
+
+    <script src="cs5003-p1.js"></script>
+</body>
+
+</html>
